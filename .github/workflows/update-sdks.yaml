@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16' # Specify your Node.js version here
-          cache: 'npm'
 
       - name: Checkout ai-worker repository
         uses: actions/checkout@v4
