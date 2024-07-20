@@ -40,6 +40,7 @@ describe 'DefaultApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Float] :strength 
   # @option opts [Float] :guidance_scale 
+  # @option opts [Float] :image_guidance_scale 
   # @option opts [String] :negative_prompt 
   # @option opts [Boolean] :safety_check 
   # @option opts [Integer] :seed 
@@ -62,6 +63,7 @@ describe 'DefaultApi' do
   # @option opts [Integer] :motion_bucket_id 
   # @option opts [Float] :noise_aug_strength 
   # @option opts [Integer] :seed 
+  # @option opts [Boolean] :safety_check 
   # @return [VideoResponse]
   describe 'image_to_video test' do
     it 'should work' do
@@ -75,6 +77,21 @@ describe 'DefaultApi' do
   # @param [Hash] opts the optional parameters
   # @return [ImageResponse]
   describe 'text_to_image test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for upscale
+  # Upscale
+  # @param prompt 
+  # @param image 
+  # @param model_id 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Boolean] :safety_check 
+  # @option opts [Integer] :seed 
+  # @return [ImageResponse]
+  describe 'upscale test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

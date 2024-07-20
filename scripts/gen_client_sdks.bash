@@ -2,7 +2,7 @@
 # A script that generates the Livepeer AI client SDKs for several languages.
 # The script uses the OpenAPI generator to generate the SDKs.
 PACKAGE_NAME="livepeer_ai"
-SPEC_PATH="../openapi_gateway.json"
+SPEC_PATH="openapi_gateway.json"
 SDKS=("go" "javascript" "python" "ruby" "typescript")
 OUTPUT_DIR="sdks"
 

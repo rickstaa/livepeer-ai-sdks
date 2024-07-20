@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(LivepeerAiRunner.VideoResponse);
     });
 
-    it('should have the property frames (base name: "frames")', function() {
-      // uncomment below and update the code to test the property frames
+    it('should have the property images (base name: "images")', function() {
+      // uncomment below and update the code to test the property images
       //var instance = new LivepeerAiRunner.VideoResponse();
       //expect(instance).to.be();
     });

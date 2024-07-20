@@ -1,5 +1,6 @@
 .babelrc
 .gitignore
+.openapi-generator-ignore
 .travis.yml
 README.md
 docs/APIError.md
@@ -29,3 +30,14 @@ src/model/TextToImageParams.js
 src/model/ValidationError.js
 src/model/ValidationErrorLocInner.js
 src/model/VideoResponse.js
+test/api/DefaultApi.spec.js
+test/model/APIError.spec.js
+test/model/HTTPError.spec.js
+test/model/HTTPValidationError.spec.js
+test/model/HealthCheck.spec.js
+test/model/ImageResponse.spec.js
+test/model/Media.spec.js
+test/model/TextToImageParams.spec.js
+test/model/ValidationError.spec.js
+test/model/ValidationErrorLocInner.spec.js
+test/model/VideoResponse.spec.js

@@ -12,17 +12,19 @@ jobs:
       - name: Checkout main repository
         uses: actions/checkout@v4
 
-      # Add this step to set up Node.js and npm with caching
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16' # Specify your Node.js version here
-
       - name: Checkout ai-worker repository
         uses: actions/checkout@v4
         with:
           repository: "livepeer/ai-worker"
           path: "ai-worker"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install OpenAPI Generator CLI
+        run: npm install -g @openapitools/openapi-generator-cli
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -39,19 +41,19 @@ jobs:
         run: |
           cd ai-worker/runner
           python gen_openapi.py --entrypoint gateway
-          mv openapi_gateway.json $GITHUB_WORKSPACE/ai/api-reference/openapi_ai_gateway.json
+          mv openapi_gateway.json $GITHUB_WORKSPACE/openapi_ai_gateway.json
           cd $GITHUB_WORKSPACE
 
       - name: Generate AI SDKs
         run: |
-          bash scripts/generate_sdks.sh
+          bash scripts/update-sdks.yaml
 
       - name: Commit OpenAPI spec and create pull request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: |
-            ai/api-reference/openapi_ai_gateway.json
+            openapi_ai_gateway.json
             sdk/*
           commit-message: "chore: update AI SDKs"
           title: "Automated AI SDKs update"

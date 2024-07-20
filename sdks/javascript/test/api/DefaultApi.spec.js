@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('upscale', function() {
+      it('should call upscale successfully', function(done) {
+        //uncomment below and update the code to test upscale
+        //instance.upscale(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

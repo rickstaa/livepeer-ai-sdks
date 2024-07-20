@@ -47,6 +47,13 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_upscale(self) -> None:
+        """Test case for upscale
+
+        Upscale
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

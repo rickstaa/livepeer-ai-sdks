@@ -58,4 +58,16 @@ func Test_livepeer_ai_DefaultAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test DefaultAPIService Upscale", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.DefaultAPI.Upscale(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 }

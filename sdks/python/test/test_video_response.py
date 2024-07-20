@@ -35,24 +35,20 @@ class TestVideoResponse(unittest.TestCase):
         model = VideoResponse()
         if include_optional:
             return VideoResponse(
-                frames = [
-                    [
-                        livepeer_ai.models.media.Media(
-                            url = '', 
-                            seed = 56, 
-                            nsfw = True, )
-                        ]
+                images = [
+                    livepeer_ai.models.media.Media(
+                        url = '', 
+                        seed = 56, 
+                        nsfw = True, )
                     ]
             )
         else:
             return VideoResponse(
-                frames = [
-                    [
-                        livepeer_ai.models.media.Media(
-                            url = '', 
-                            seed = 56, 
-                            nsfw = True, )
-                        ]
+                images = [
+                    livepeer_ai.models.media.Media(
+                        url = '', 
+                        seed = 56, 
+                        nsfw = True, )
                     ],
         )
         """

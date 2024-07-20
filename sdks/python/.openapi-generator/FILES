@@ -1,6 +1,7 @@
 .github/workflows/python.yml
 .gitignore
 .gitlab-ci.yml
+.openapi-generator-ignore
 .travis.yml
 README.md
 docs/APIError.md
@@ -41,4 +42,15 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_api_error.py
+test/test_default_api.py
+test/test_health_check.py
+test/test_http_error.py
+test/test_http_validation_error.py
+test/test_image_response.py
+test/test_media.py
+test/test_text_to_image_params.py
+test/test_validation_error.py
+test/test_validation_error_loc_inner.py
+test/test_video_response.py
 tox.ini
